@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $m_password = $_POST["m_password"];
 
     // ค้นหาผู้ใช้ในฐานข้อมูล
-    $sql = "SELECT * FROM member WHERE m_name='$m_name' AND m_password='$m_password'";
+    $sql = "SELECT * FROM `member` WHERE `m_name` = '$m_name' AND `m_password` = '$m_password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {

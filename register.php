@@ -4,12 +4,12 @@ session_start();
 // เชื่อมต่อกับฐานข้อมูล
 $servername = "localhost";
 $username = "root";
-$password = "16112004";  
+$password = "16112004";
 $dbname = "membertest";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
-    die ("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // เพิ่มข้อมูลลงในฐานข้อมูล
-        $sql = "INSERT INTO userlogin (m_name, m_password, m_age) VALUES ('$m_name', '$m_password', '$m_age')";
+        $sql = "INSERT INTO `member` (`m_name`, `m_password`, `m_age`) VALUES ('$m_name', '$m_password', '$m_age')";
         if ($conn->query($sql) === TRUE) {
             // เมื่อลงทะเบียนสำเร็จ
             $_SESSION['success_message'] = "ลงทะเบียนเสร็จสิ้น";
-            header("Location: home.html");
+            header("Location: loginpage.php");
             exit;
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;

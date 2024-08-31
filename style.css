@@ -1,5 +1,5 @@
 body {
-    background-color: #333;
+    background-color: #d8ede6;
     font-family: Prompt, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,22 +7,23 @@ body {
 h1 {
     text-align: center;
     font-size: 42px;
-    color: red;
-    text-shadow: 0px 0px 50px rgb(255, 64, 64); /* เพิ่มเงาให้กับข้อความ */
+    color: #3e8977;
+    text-shadow: 0px 0px 50px rgb(68, 255, 193); /* เพิ่มเงาให้กับข้อความ */
 }
 p {
-    text-align: center;
+    text-align: left;
     font-size: 22px;
+    margin-left: 5%;
     color: azure;
 }
 a {
     text-decoration: none;
     font-size: 22px;
-    color: chartreuse;
+    color: #3e8977;
 }
 a:hover {
     text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
-    text-shadow: 0px 0px 50px rgb(73, 255, 73); /* เพิ่มเงาฟุ้งเมื่อ hover */
+    text-shadow: 0px 0px 50px #d8ede6; /* เพิ่มเงาฟุ้งเมื่อ hover */
 }
 form {
     background-color: rgb(0, 0, 0);
@@ -31,24 +32,37 @@ form {
     margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 20px;
-    border: 3px solid red;
+    border: 3px solid #55e9ff;
     border-radius: 10px;
-    box-shadow: 0 0 20px red; /* เพิ่มเงาฟุ้งกระจาย */
+    box-shadow: 0 0 20px #84efff; /* เพิ่มเงาฟุ้งกระจาย */
 }
 input {
     height: 24px;
-    width: 200px;
-    border: 2px solid red;
+    width: 90%;
+    border: 2px solid #84efff;
     border-radius: 10px;
 }
 button {
     background-color: black;
     font-size: 18px;
     color: white;
-    border: 2px solid chartreuse;
+    border: 2px solid #3e8977;
     border-radius: 5px;
 }
 button:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px rgb(41, 255, 41);
+    box-shadow: 0 0 30px rgb(10, 151, 10);
+}
+
+@media(max-width: 500px){
+    form{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media(min-width: 501px) and (max-width: 1250px){
+    form{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }
